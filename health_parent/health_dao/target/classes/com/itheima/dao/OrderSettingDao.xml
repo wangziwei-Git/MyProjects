@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：预约设置接口配置的映射，写接口的全限定类名-->
+<mapper namespace="com.itheima.dao.OrderSettingDao">
+    <!--
+     * 查看数据库中否有一样的预约时间
+     * @param orderDate 预约时间
+     * @return 相同的总数
+    -->
+    <select id="findCountByOrderDate" parameterType="java.util.Date" resultType="int">
+        select count(*) from t_ordersetting where orderDate = #{orderDate}
+    </select>
+
+    <!--
+     * 执行修改操作:根据预约时间修改该预约人数
+     * @param orderSetting 修改的对象
+    -->
+    <update id="editNumberByOrderDate" parameterType="com.itheima.pojo.OrderSetting">
+        update t_ordersetting set number = #{number} where orderDate = #{orderDate}
+    </update>
+
+    <!--
+     * 执行添加操作
+     * @param orderSetting 添加的对象
+    -->
+    <insert id="add" parameterType="com.itheima.pojo.OrderSetting">
+        insert into t_ordersetting(orderDate,number,reservations)
+        value (#{orderDate},#{number},#{reservations})
+    </insert>
+
+    <!--
+     * 查询当前月份的预约设置
+     * @param map 查询时间范围
+     * @return 对象集合
+    -->
+    <select id="getOrderSettingByMonth" parameterType="hashmap" resultType="com.itheima.pojo.OrderSetting">
+        <!--查询范围-->
+       SELECT * FROM t_ordersetting where orderDate BETWEEN '2020-11-1' and '2020-11-30'
+    </select>
+</mapper>

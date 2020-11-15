@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：给哪个接口配置的映射，写接口的全限定类名-->
+<mapper namespace="com.itheima.dao.CheckGroupDao">
+    <!--
+     * 检查组:查询所有
+     * @return 检查组集合
+    -->
+    <select id="findAll" resultType="com.itheima.pojo.CheckGroup">
+        select * from t_checkgroup
+    </select>
+
+    <!--检查组：分页查询-->
+    <select id="findPageByCondition" parameterType="string" resultType="com.itheima.pojo.CheckGroup">
+        select * from t_checkgroup
+        <if test="value!=null and value.length>0">
+            <!-- where code = #{value} or name like '%${value}%' or helpcode = #{value}-->
+            where code = #{value} or name like concat('%',#{value},'%') or helpcode = #{value}
+        </if>
+    </select>
+
+    <!--检查组：添加对象-->
+    <insert id="add" parameterType="com.itheima.pojo.CheckGroup">
+        <!--获取最新的主键：要在插入中间表的时候用-->
+        <selectKey resultType="int" order="AFTER" keyProperty="id">
+            select LAST_INSERT_ID()
+        </selectKey>
+
+        <!--添加对象-->
+        insert
+          into
+            t_checkgroup(code,name,helpCode,sex,remark,attention)
+          value
+            (#{code},#{name},#{helpCode},#{sex},#{remark},#{attention})
+    </insert>
+
+    <!--设置检查组和检查项的关联关系-->
+    <insert id="setCheckGroupAndCheckItem">
+        insert
+          into
+            t_checkgroup_checkitem(checkgroup_id,checkitem_id)
+          value
+            (#{checkgroup_id},#{checkitem_id})
+    </insert>
+
+    <!--
+     * 检查组：回显要编辑的检查组对象
+     * @param checkgroupId 要编辑的检查组
+     * @return 回显要编辑的检查组对象
+    -->
+    <select id="findById" parameterType="int" resultType="com.itheima.pojo.CheckGroup">
+        select * from t_checkgroup where id = #{checkgroupId}
+    </select>
+
+    <!--
+    根据检查组id查询检查项列表数据
+		property = "checkGroups":将查询的结果设置到property="checkGroups"属性上
+		column="id":检查组id
+		select=""根据检查组id查询检查项列表数据
+    -->
+    <resultMap type="com.itheima.pojo.CheckGroup" id="findByIdResultMap">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="code" property="code"/>
+        <result column="helpCode" property="helpCode"/>
+        <result column="sex" property="sex"/>
+        <result column="remark" property="remark"/>
+        <result column="attention" property="attention"/>
+        <collection property="checkItems" column="id"
+                    select="com.itheima.dao.CheckitheDao.findCheckItemListById">
+        </collection>
+    </resultMap>
+    <!--根据套餐id查询检查项信息-->
+    <select id="findCheckGroupListById" resultMap="findByIdResultMap">
+    select * from t_checkgroup  where id
+    in (select checkgroup_id from t_setmeal_checkgroup where setmeal_id=#{id})
+</select>
+
+
+    <!--
+     * 检查组：回显要编辑的关系检查项的id（中间表）
+     * @param checkgroupId 要编辑的检查组id
+     * @return  List<Integer> 会自动转成 Integer数组
+    -->
+    <select id="findCheckItemIdsByCheckGroupId" parameterType="int" resultType="int">
+        <!--查询 检查项 指定表是 中间关系表 条件是检查组id-->
+        select checkitem_id from t_checkgroup_checkitem where checkgroup_id = #{checkgroupId}
+    </select>
+
+    <!--
+     * 检查组：修改功能
+     * @param checkGroup 修改的检查组对象
+    -->
+    <update id="edit" parameterType="com.itheima.pojo.CheckGroup">
+        update t_checkgroup
+        <set>
+            <if test="name != null and name.length>0">
+                name = #{name},
+            </if>
+            <if test="sex != null and sex.length>0">
+                sex = #{sex},
+            </if>
+            <if test="code != null and code.length>0">
+                code = #{code},
+            </if>
+            <if test="helpCode != null and helpCode.length>0">
+                helpCode = #{helpCode},
+            </if>
+            <if test="attention != null and attention.length>0">
+                attention = #{attention},
+            </if>
+            <if test="remark != null and remark.length>0">
+                remark = #{remark},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--根据检查组id删除中间表数据（清理原有关联关系）-->
+    <delete id="deleteAssociation" parameterType="int">
+        delete from t_checkgroup_checkitem where checkgroup_id = #{checkgroupId}
+    </delete>
+
+    <!--
+     * 1.要检查组id查询是否有关联的检查项
+     * @param checkgroupId 检查组的id
+     * @return 关联检查项的数量
+     -->
+    <select id="findCheckGroupAndCheckItemCountByCheckGroupId" parameterType="int" resultType="int">
+        select count(*) from t_checkgroup_checkitem where checkgroup_id = #{checkgroupId}
+    </select>
+
+
+    <!--
+     * 2.使用检查组id，查询 套餐 和 检查组 的 中间表
+     * @param checkgroupId 检查组的id
+     * @return 关联套餐的数量
+     -->
+    <select id="findSetmealAndCheckGroupCountByCheckGroupId" parameterType="int" resultType="int">
+        select count(*) from t_setmeal_checkgroup where checkgroup_id = #{checkgroupId}
+    </select>
+
+    <!--
+     * 检查组:删除功能
+     * @param checkgroupId 删除的id
+    -->
+    <delete id="deleteById" parameterType="int">
+        delete from t_checkgroup where id =#{checkgroupId}
+    </delete>
+
+
+</mapper>

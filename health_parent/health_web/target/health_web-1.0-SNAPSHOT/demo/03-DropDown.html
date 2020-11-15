@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<!--第二步：定义容器 受vue控制-->
+<div id="app">
+
+    <!--trigger="click"：点击触发显示下拉框-->
+    <el-dropdown trigger="click">
+      <span class="el-dropdown-link">
+        登录头像<i class="el-icon-arrow-down el-icon--right"></i>
+      </span>
+        <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>修改密码</el-dropdown-item>
+            <el-dropdown-item>退出</el-dropdown-item>
+        </el-dropdown-menu>
+    </el-dropdown>
+
+
+</div>
+</body>
+<!--第三步 引入vue elmentui-->
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return { visible: false }
+        }
+    })
+</script>
+<style>
+    .el-dropdown-link {
+        cursor: pointer;
+        color: #409EFF;
+    }
+    .el-icon-arrow-down {
+        font-size: 12px;
+    }
+    .demonstration {
+        display: block;
+        color: #8492a6;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+</style>
+</html>

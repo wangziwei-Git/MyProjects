@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：给哪个接口配置的映射，写接口的全限定类名-->
+<!--
+ * 检查项映射配置文件
+ -->
+<mapper namespace="com.itheima.dao.CheckitheDao">
+    <!--
+     * 查询所有检查项列表
+     * @return 查询结果
+    -->
+    <select id="findAll" resultType="com.itheima.pojo.CheckItem">
+        select * from t_checkitem
+    </select>
+
+    <!--
+     * 体检检查项管理:添加功能
+     * @param checkItem 添加的数据
+     -->
+    <insert id="add" parameterType="com.itheima.pojo.CheckItem">
+        insert
+          into
+             t_checkitem(code,name,sex,age,price,type,remark,attention)
+          values
+            (#{code},#{name},#{sex},#{age},#{price},#{type},#{remark},#{attention})
+    </insert>
+
+    <!--
+     * 体检检查项管理:分页查询所有功能
+     * @param queryString   //查询条件
+     * @return 总数和对象
+    -->
+    <select id="selectByCondition" parameterType="string" resultType="com.itheima.pojo.CheckItem">
+        select * from t_checkitem
+        <!--判断text控件中是否右值-->
+        <if test="value != null and value.length > 0">
+            where code = #{value} or name = #{value}
+        </if>
+    </select>
+
+    <!--根据检查项id查询中间关系表-->
+    <select id="findCountByCheckItemId" resultType="long" parameterType="int">
+        select count(*) from t_checkgroup_checkitem where checkitem_id = #{checkitem_id}
+    </select>
+    
+    <!--
+    * 体检检查项管理:删除功能
+    * @param id 删除的id
+    -->
+    <delete id="delete" parameterType="int">
+        delete from t_checkitem where id = #{id}
+    </delete>
+
+    <!--
+    * 体检检查项管理:查询修改对象功能
+    * @param id 修改id
+    * @return 修改对象
+    -->
+    <select id="findById" parameterType="int" resultType="com.itheima.pojo.CheckItem">
+        select * from t_checkitem where id = #{id}
+    </select>
+
+    <!--
+     * 体检检查项管理:修改功能
+     * @param checkItem 修改后的对象
+    -->
+    <update id="edit" parameterType="com.itheima.pojo.CheckItem">
+
+        <!--修改t_checkitem表-->
+        update t_checkitem
+
+        <!--修改的参数不能为空-->
+        <set>
+            <if test="code!=null and code.length>0">
+                code=#{code},
+            </if>
+            <if test="name!=null and name.length>0">
+                name=#{name},
+            </if>
+            <if test="sex!=null and sex.length>0">
+                sex=#{sex},
+            </if>
+            <if test="age!=null and age.length>0">
+                age=#{age},
+            </if>
+            <if test="price!=null">
+                price=#{price},
+            </if>
+            <if test="type!=null and type.length>0">
+                type=#{type},
+            </if>
+            <if test="remark!=null and remark.length>0">
+                remark=#{remark},
+            </if>
+            <if test="attention!=null and attention.length>0">
+                attention=#{attention},
+            </if>
+        </set>
+
+        <!--条件-->
+        where id = #{id}
+    </update>
+
+    <!--根据检查组id查询检查项信息-->
+    <select id="findCheckItemListById" resultType="com.itheima.pojo.CheckItem">
+    select * from t_checkitem  where id
+    in (select checkitem_id from t_checkgroup_checkitem where checkgroup_id=#{id})
+  </select>
+
+</mapper>
