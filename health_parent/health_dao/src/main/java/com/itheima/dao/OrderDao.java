@@ -28,4 +28,13 @@ public interface OrderDao {
      * @return map集合:对应的信息
      */
     Map findById4Detail(Integer id);
+
+
+    public Integer findOrderCountByDate(String date);
+    public Integer findOrderCountAfterDate(String date);
+    public Integer findVisitsCountByDate(String date);
+    public Integer findVisitsCountAfterDate(String date);
+    public List<Map> findHotSetmeal();
+    Integer findOrderCountBetweenDate(Map<String,Object> map);
+    Integer findVisitsCountAfterDate(Map<String,Object> map);
 }

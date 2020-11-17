@@ -30,6 +30,26 @@ public class MbileValidateCodeController {
      */
     @RequestMapping("/send4Order")
     public Result send4Order(String telephone){
+        //用来发验证码的方法
+        return getSend4(telephone, RedisMessageConstant.SENDTYPE_ORDER);
+    }
+
+    /**
+     * 手机登录-发送验证码
+     */
+    @RequestMapping("/send4Login")
+    public Result send4Login(String telephone){
+        //用来发验证码的方法
+        return getSend4(telephone, RedisMessageConstant.SENDTYPE_LOGIN);
+    }
+
+    /**
+     * 用来发验证码的方法
+     * @param telephone 手机号
+     * @param str 存入redis的声明(做什么的)
+     * @return 结果
+     */
+    private Result getSend4(String telephone, String str) {
         try {
             //1.生成4位数验证码
             String code = ValidateCodeUtils.generateValidateCode(4)+"";
@@ -41,7 +61,7 @@ public class MbileValidateCodeController {
             //3.将验证码打印到控制台
             System.out.println("发送的手机验证码为：" + code);
             //4.将验证码存到redis中,设置时间为5分钟(key,过期时间,value)
-            jedisPool.getResource().setex(telephone+ RedisMessageConstant.SENDTYPE_ORDER,5*60,code);
+            jedisPool.getResource().setex(telephone+ str,5*60,code);
             //5.处理结果
             //成功
             return new Result(true, MessageConstant.SEND_VALIDATECODE_SUCCESS);

@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /pages/main.html HTTP/1.1" 304 - http-bio-82-exec-1 58
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /plugins/elementui/index.css HTTP/1.1" 304 - http-bio-82-exec-3 5
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 - http-bio-82-exec-2 7
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /js/jquery.min.js HTTP/1.1" 304 - http-bio-82-exec-7 3
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /plugins/elementui/index.js HTTP/1.1" 304 - http-bio-82-exec-6 5
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /css/style.css HTTP/1.1" 304 - http-bio-82-exec-4 10
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /js/vue.js HTTP/1.1" 304 - http-bio-82-exec-5 10
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /pages/ordersetting.html HTTP/1.1" 304 - http-bio-82-exec-9 4
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /img/logo.png HTTP/1.1" 304 - http-bio-82-exec-10 4
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /img/user2-160x160.jpg HTTP/1.1" 304 - http-bio-82-exec-10 2
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 - http-bio-82-exec-3 3
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /plugins/elementui/fonts/element-icons.woff HTTP/1.1" 304 - http-bio-82-exec-2 2
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /css/orderset.css HTTP/1.1" 304 - http-bio-82-exec-2 1
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:27 +0800] "GET /js/axios-0.18.0.js HTTP/1.1" 304 - http-bio-82-exec-5 2
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:28 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-82-exec-2 5
+0:0:0:0:0:0:0:1 - - [17/Nov/2020:18:10:28 +0800] "GET /ordersetting/getOrderSettingByMonth.do?date=2020-11 HTTP/1.1" 200 574 http-bio-82-exec-5 634
