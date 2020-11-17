@@ -39,4 +39,21 @@
         <!--查询范围-->
        SELECT * FROM t_ordersetting where orderDate BETWEEN '2020-11-1' and '2020-11-30'
     </select>
+
+    <!--
+     * 根据预约日期查询预约设置信息
+     * @param date 查询条件:预约日期
+     * @return 预约设置的信息
+    -->
+    <select id="findByOrderDate" parameterType="Date" resultType="com.itheima.pojo.OrderSetting">
+        select * from t_ordersetting where orderDate = #{orderDate}
+    </select>
+
+    <!--
+     * 更新设置预约人数加一
+     * @param orderDate 添加条件:预约日期
+    -->
+    <update id="editReservationsByOrderDate" parameterType="Date">
+        update t_ordersetting set  reservations = reservations+1 where orderDate = #{orderDate}
+    </update>
 </mapper>

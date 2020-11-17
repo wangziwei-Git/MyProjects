@@ -10,6 +10,7 @@ public class MessageConstant {
     public static final String DELETE_SETMEAL_SUCCESS = "删除检查项成功";
     public static final String GET_SETMEAL_DETAIL_SUCCESS = "查询套餐详情数据成功";
     public static final String GET_SETMEAL_DETAIL_FAIL = "查询套餐详情数据失败";
+    public static final String SYSTEM_FAIL = "系统信息异常";
 
 
     public static final String DELETE_CHECKITEM_FAIL = "删除检查项失败";

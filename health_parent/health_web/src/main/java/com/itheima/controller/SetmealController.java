@@ -90,7 +90,7 @@ public class SetmealController {
      * @param setmealId 套餐id
      * @return 套餐对象
      */
-    @RequestMapping(value = "/findById",method = RequestMethod.GET)
+    @RequestMapping("/findById")
     public Result findById(Integer setmealId){
         try {
             //实现功能
