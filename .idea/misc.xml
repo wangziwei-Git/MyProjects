@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/health_parent/health_service" />
     <file type="web" url="file://$PROJECT_DIR$/health_parent/health_web" />
     <file type="web" url="file://$PROJECT_DIR$/health_parent/healthmobile_web" />
+    <file type="web" url="file://$PROJECT_DIR$/health_parent/springsecurity_demo" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />

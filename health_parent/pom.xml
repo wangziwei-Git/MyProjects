@@ -16,6 +16,7 @@
         <module>health_web</module>
         <module>health_jobs</module>
         <module>healthmobile_web</module>
+        <module>springsecurity_demo</module>
     </modules>
     <!--打包方式-->
     <packaging>pom</packaging>
