@@ -8,6 +8,7 @@ import com.itheima.entity.Result;
 import com.itheima.pojo.CheckGroup;
 import com.itheima.pojo.CheckItem;
 import com.itheima.service.CheckitheService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,6 +31,7 @@ public class CheckitheController {
      * 查询所有检查项列表
      */
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    @PreAuthorize("hasAuthority('CHECKITEM_QUERY')")//权限校验
     public Result findAll() {
         try {
             List<CheckItem> checkItemList = checkItemService.findAll();
@@ -65,6 +67,7 @@ public class CheckitheController {
      * @return 提示对象
      */
     @RequestMapping(value = "add", method = RequestMethod.POST)
+    @PreAuthorize("hasAuthority('CHECKITEM_ADD')")//权限校验
     public Result add(@RequestBody CheckItem checkItem) {//1.接收参数并封装实体
         try {
             //2.实现功能:调用service业务接口对象
@@ -85,6 +88,7 @@ public class CheckitheController {
      * @return 是否成功
      */
     @RequestMapping(value = "/delete",method = RequestMethod.GET)
+    @PreAuthorize("hasAuthority('CHECKITEM_DELETE')")//权限校验
     public Result delete(Integer id){
         try {
             //1.实现功能:调用service
@@ -126,6 +130,7 @@ public class CheckitheController {
      * @return 是否成功
      */
     @RequestMapping(value = "/edit",method = RequestMethod.POST)
+    @PreAuthorize("hasAuthority('CHECKITEM_EDIT')")//权限校验
     public Result edit(@RequestBody CheckItem checkItem){
         try {
             //1.实现功能:调用service

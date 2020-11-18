@@ -257,16 +257,22 @@
                    if(valid){
                        //提交参数
                        axios.post("/checkitem/edit.do",this.formData).then(response=>{
+                           //关闭编辑弹窗
+                           this.dialogFormVisible4Edit = false;
+                           //提示
                            this.$message({
                                //返回的提示
                                message: response.data.message,
                                //要三元表达式来判断是否成功
                                type: response.data.flag ? 'success' : 'error'
                            });
+                       }).catch((error)=>{
+                           //添加点:调用权限异常提示
+                           this.showMessage(error);
                        }).finally(()=> {
                            //重新发送请求查询分页数据
                            this.findPage();
-                       });;
+                       });
                    }else{
                        //表单校验失败
                        this.$message.error("表单数据校验失败");
@@ -292,10 +298,13 @@
                                 type: response.data.flag ? 'success' : 'error'
                             });
                             //提交后更新数据
+                        }).catch((error)=>{
+                            //添加点:调用权限异常提示
+                            this.showMessage(error);
                         }).finally(() => {
                             //刷新列表数据(调用查询)
                             this.findPage()
-                        })
+                        });
                     }//如果合法
                 });
             },
@@ -325,6 +334,9 @@
                     this.dataList = response.data.rows;
                     //将总数添加到分页的total中
                     this.pagination.total = response.data.total;
+                }).catch((error)=>{
+                    //添加点:调用权限异常提示
+                    this.showMessage(error);
                 });
             },
             // 重置表单
@@ -351,6 +363,9 @@
                     }else{
                         this.$message.error(response.data.message);
                     }
+                }).catch((error)=>{
+                    //添加点:调用权限异常提示
+                    this.showMessage(error);
                 });
 
 
@@ -376,8 +391,25 @@
                         });
                         //调用分页，获取最新分页数据
                         this.findPage();
+                    }).catch((error)=>{
+                        //添加点:调用权限异常提示
+                        this.showMessage(error);
                     });
+                }).catch(()=> {
+                    //点击取消按钮执行此代码
+                    this.$message('操作已取消');
                 });
+            },
+            //添加点:权限不足提示
+            showMessage(r){
+                if(r == 'Error: Request failed with status code 403'){
+                    //权限不足
+                    this.$message.error('无访问权限');
+                    return;
+                }else {
+                    this.$message.error('未知错误');
+                    return;
+                }
             }
         }
     })

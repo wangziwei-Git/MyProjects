@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：给哪个接口配置的映射，写接口的全限定类名-->
+<mapper namespace="com.itheima.dao.PermissionDao">
+    <!--
+     * 查询指定角色的所有权限
+     * @param roleId RoleDao.xml传过来的角色id
+     * @return 权限集合
+    -->
+    <select id="findPermissionsByRoleId" parameterType="int" resultType="com.itheima.pojo.Permission">
+--      查询权限表和中间表,条件根据角色id在中间表中查询所有的权限id ,and 根据查出来的权限id查询所有的权限对象
+        SELECT p.* FROM t_permission p,t_role_permission rp WHERE p.id = rp.permission_id AND rp.role_id = #{roleId}
+    </select>
+
+</mapper>

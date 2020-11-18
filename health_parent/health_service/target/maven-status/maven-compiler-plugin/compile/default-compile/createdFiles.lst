@@ -4,3 +4,4 @@ com\itheima\service\impl\MemberServiceImpl.class
 com\itheima\service\impl\CheckitheServiceImpl.class
 com\itheima\service\impl\CheckgroupServiceImpl.class
 com\itheima\service\impl\OrderSettingServiceImpl.class
+com\itheima\service\impl\UserServiceImpl.class

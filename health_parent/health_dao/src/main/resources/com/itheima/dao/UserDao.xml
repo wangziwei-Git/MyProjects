@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：给哪个接口配置的映射，写接口的全限定类名-->
+<mapper namespace="com.itheima.dao.UserDao">
+    <!--
+     * 远程调用用户服务,根据用户名查询用户信息
+     * @param username 用户名
+     * @return 用户对象
+    -->
+    <select id="findUserByUsername" parameterType="String" resultMap="userMap">
+--     查询指定用户
+       select u.* from t_user u where u.username = #{username}
+    </select>
+    <!--对应的userMap-->
+    <resultMap id="userMap" type="com.itheima.pojo.User">
+        <!--需要传参的用户id-->
+        <id column="id" property="id"></id>
+        <!--调用RoleDao的findRolesByUserId方法-->
+        <collection property="roles" column="id" select="com.itheima.dao.RoleDao.findRolesByUserId"></collection>
+    </resultMap>
+</mapper>

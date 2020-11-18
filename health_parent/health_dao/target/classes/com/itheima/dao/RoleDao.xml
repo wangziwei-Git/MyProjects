@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：给哪个接口配置的映射，写接口的全限定类名-->
+<mapper namespace="com.itheima.dao.RoleDao">
+    <!--
+     * 查询指定用户的所有角色
+     * @param userId UserDao.xml传过来的用户id
+     * @return 角色集合
+    -->
+    <select id="findRolesByUserId" parameterType="int" resultMap="roleMap">
+--      查询角色表和中间表,条件根据用户id在中间表中查询所有的角色id ,and 根据查出来的角色id查询所有的角色对象
+        SELECT r.* FROM t_role r,t_user_role ur WHERE r.id = ur.role_id AND ur.user_id = #{userId}
+    </select>
+    <!--对应的resultMap封装到Role中-->
+    <resultMap id="roleMap" type="com.itheima.pojo.Role">
+        <!--需要的角色id-->
+        <id column="id" property="id"></id>
+        <!--调用在PermissionDao中findPermissionsByRoleId方法,传值角色id-->
+        <collection property="permissions" column="id" select="com.itheima.dao.PermissionDao.findPermissionsByRoleId"></collection>
+    </resultMap>
+</mapper>
