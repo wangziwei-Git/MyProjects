@@ -2,71 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="424cd926-6af2-4168-bb60-eea395c2e9c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/health_parent/health_dao/src/main/java/com/itheima/dao/PermissionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_dao/src/main/java/com/itheima/dao/RoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_dao/src/main/java/com/itheima/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_dao/src/main/resources/com/itheima/dao/PermissionDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_dao/src/main/resources/com/itheima/dao/RoleDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_dao/src/main/resources/com/itheima/dao/UserDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_interface/src/main/java/com/itheima/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_service/src/main/java/com/itheima/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/security/SpringSecurityUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_web/src/main/resources/Spring-security.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health_parent/health_web/src/main/webapp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_common/target/health_common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_common/target/health_common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_common/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_common/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_dao/target/health_dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_dao/target/health_dao-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_dao/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_interface/target/health_interface-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_interface/target/health_interface-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_interface/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_interface/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_interface/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_interface/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_interface/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_interface/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_jobs/target/health_jobs-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_jobs/target/health_jobs-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_jobs/target/health_jobs-1.0-SNAPSHOT/WEB-INF/lib/health_common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_jobs/target/health_jobs-1.0-SNAPSHOT/WEB-INF/lib/health_common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_jobs/target/health_jobs-1.0-SNAPSHOT/WEB-INF/lib/health_interface-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_jobs/target/health_jobs-1.0-SNAPSHOT/WEB-INF/lib/health_interface-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_jobs/target/health_jobs-1.0-SNAPSHOT/WEB-INF/lib/health_pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_jobs/target/health_jobs-1.0-SNAPSHOT/WEB-INF/lib/health_pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_jobs/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_jobs/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_pojo/target/health_pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_pojo/target/health_pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_pojo/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_pojo/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT/WEB-INF/lib/health_common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT/WEB-INF/lib/health_common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT/WEB-INF/lib/health_dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT/WEB-INF/lib/health_dao-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT/WEB-INF/lib/health_interface-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT/WEB-INF/lib/health_interface-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT/WEB-INF/lib/health_pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_service/target/health_service-1.0-SNAPSHOT/WEB-INF/lib/health_pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_service/target/tomcat/logs/access_log.2020-11-17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/controller/CheckitheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/controller/CheckitheController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/checkitem.html" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/checkitem.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/classes/com/itheima/controller/CheckitheController.class" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/classes/com/itheima/controller/CheckitheController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/classes/com/itheima/controller/CheckitheController.class" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/classes/com/itheima/controller/CheckitheController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/lib/health_common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/lib/health_common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/lib/health_interface-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/lib/health_interface-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/lib/health_pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/lib/health_pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/pages/checkitem.html" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/health_web-1.0-SNAPSHOT/pages/checkitem.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/health_web/target/tomcat/logs/access_log.2020-11-17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/healthmobile_web/target/healthmobile_web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/healthmobile_web/target/healthmobile_web-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/healthmobile_web/target/healthmobile_web-1.0-SNAPSHOT/WEB-INF/lib/health_common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/healthmobile_web/target/healthmobile_web-1.0-SNAPSHOT/WEB-INF/lib/health_common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/healthmobile_web/target/healthmobile_web-1.0-SNAPSHOT/WEB-INF/lib/health_interface-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/healthmobile_web/target/healthmobile_web-1.0-SNAPSHOT/WEB-INF/lib/health_interface-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/healthmobile_web/target/healthmobile_web-1.0-SNAPSHOT/WEB-INF/lib/health_pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/healthmobile_web/target/healthmobile_web-1.0-SNAPSHOT/WEB-INF/lib/health_pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/healthmobile_web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/healthmobile_web/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/healthmobile_web/target/tomcat/conf/logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/healthmobile_web/target/tomcat/conf/tomcat-users.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/healthmobile_web/target/tomcat/conf/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_parent/healthmobile_web/target/tomcat/logs/access_log.2020-11-17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/main.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/health_parent/health_interface/target/" />
     <ignored path="$PROJECT_DIR$/health_parent/health_jobs/target/" />
@@ -86,40 +24,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/resources/Spring-security.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/controller/CheckitheController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/checkitem.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="267" column="16" lean-forward="true" selection-start-line="267" selection-start-column="16" selection-end-line="267" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/security/SpringSecurityUserService.java">
+        <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="188">
+              <caret line="43" column="50" lean-forward="true" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#el-dropdown-item#1;n#el-dropdown-menu#0;n#el-dropdown#0;n#div#0;n#nav#0;n#el-header#0;n#el-container#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#3695#7128#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://E:/sotr/maven/repository/org/springframework/security/spring-security-core/5.0.5.RELEASE/spring-security-core-5.0.5.RELEASE.jar!/org/springframework/security/core/context/SecurityContextHolder.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+              <folding>
+                <element signature="e#991#992#0" expanded="true" />
+                <element signature="e#1035#1036#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,9 +70,9 @@
         <option value="log4j" />
         <option value="HTML File" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="xml-SQL-Dao" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -156,6 +93,8 @@
       <find>annotation</find>
       <find>headers</find>
       <find>edit</find>
+      <find>username</find>
+      <find>退出</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,8 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/controller/SetmealController.java" />
-        <option value="$PROJECT_DIR$/health_parent/healthmobile_web/src/main/webapp/plugins/healthmobile.js" />
         <option value="$PROJECT_DIR$/health_parent/healthmobile_web/src/main/webapp/pages/orderInfo.html" />
         <option value="$PROJECT_DIR$/health_parent/health_dao/src/main/resources/com/itheima/dao/findByOrderDate.xml" />
         <option value="$PROJECT_DIR$/health_parent/health_dao/src/main/java/com/itheima/dao/OrderSettingDao.java" />
@@ -215,6 +152,8 @@
         <option value="$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/controller/CheckitheController.java" />
         <option value="$PROJECT_DIR$/health_parent/health_web/src/main/resources/Spring-security.xml" />
         <option value="$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/checkitem.html" />
+        <option value="$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/main.html" />
       </list>
     </option>
   </component>
@@ -269,10 +208,10 @@
     <option name="jreName" value="#JAVA_HOME" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1089" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -395,6 +334,16 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="My_CZJK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="My_CZJK" type="462c0819:PsiDirectoryNode" />
+              <item name="health_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -408,7 +357,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1605703034743" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1605706894807" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="D:/黑马/就业班/6.传智健康/day07/代码/health_parent" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -439,7 +388,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.health_web [tomcat7:run]">
+  <component name="RunManager" selected="Maven.health_service [tomcat7:run]">
     <configuration name="health_service [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -612,8 +561,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Maven.health_web [tomcat7:run]" />
         <item itemvalue="Maven.health_service [tomcat7:run]" />
+        <item itemvalue="Maven.health_web [tomcat7:run]" />
         <item itemvalue="Maven.springsecurity_demo [tomcat7:run]" />
         <item itemvalue="Maven.healthmobile_web [tomcat7:run]" />
       </list>
@@ -635,7 +584,7 @@
       <workItem from="1605572112400" duration="13013000" />
       <workItem from="1605608348022" duration="12726000" />
       <workItem from="1605657403185" duration="12450000" />
-      <workItem from="1605691952872" duration="9609000" />
+      <workItem from="1605691952872" duration="13466000" />
     </task>
     <servers />
   </component>
@@ -654,7 +603,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85444000" />
+    <option name="totallyTimeSpent" value="89301000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -667,7 +616,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.50345784" side_tool="true" weight="0.3344504" />
       <window_info id="Image Layers" order="1" />
@@ -676,11 +624,11 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.4965422" visible="true" weight="0.25871313" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.4965422" visible="true" weight="0.53351206" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289855" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.466759" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.65512466" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.7063712" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963988" />
@@ -731,30 +679,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/health_parent/healthmobile_web/src/main/java/com/itheima/mobile/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health_parent/health_interface/src/main/java/com/itheima/service/MemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health_parent/health_dao/src/main/resources/com/itheima/dao/MemberDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/health_parent/health_dao/src/main/resources/com/itheima/dao/OrderDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -1091,13 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/checkitem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="267" column="16" lean-forward="true" selection-start-line="267" selection-start-column="16" selection-end-line="267" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/sotr/maven/repository/org/springframework/security/spring-security-core/5.0.5.RELEASE/spring-security-core-5.0.5.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -1107,10 +1024,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/security/SpringSecurityUserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="851">
+          <caret line="71" column="48" lean-forward="true" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/checkitem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="267" column="16" lean-forward="true" selection-start-line="267" selection-start-column="16" selection-end-line="267" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/sotr/maven/repository/org/springframework/security/spring-security-core/5.0.5.RELEASE/spring-security-core-5.0.5.RELEASE.jar!/org/springframework/security/core/context/SecurityContextHolder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/java/com/itheima/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health_parent/health_web/src/main/webapp/pages/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="43" column="50" lean-forward="true" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#el-dropdown-item#1;n#el-dropdown-menu#0;n#el-dropdown#0;n#div#0;n#nav#0;n#el-header#0;n#el-container#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3695#7128#0" />
           </folding>
         </state>
       </provider>

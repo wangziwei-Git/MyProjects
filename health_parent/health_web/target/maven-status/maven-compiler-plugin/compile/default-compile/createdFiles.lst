@@ -3,3 +3,4 @@ com\itheima\security\SpringSecurityUserService.class
 com\itheima\controller\OrderSettingController.class
 com\itheima\controller\CheckgroupController.class
 com\itheima\controller\SetmealController.class
+com\itheima\controller\UserController.class
